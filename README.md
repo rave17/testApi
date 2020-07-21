@@ -2,6 +2,7 @@
 
 > Simple api with node js and mongo atlas. Routes and controllers, basic structure.
 > List - Create - Delete - Update 
+> You can create a student with basic info
 ___
 ## endpoints:
 
@@ -17,6 +18,16 @@ ___
 ### /all/upd/:id
  - edit an specific student by id
  
+____
+## TO DO
+
+[] create views
+[] check data recived
+[] integrate data with views
+[] verify integration
+____
+
+
 ## for test:
 1) download or clone repo
 2) set ``.env`` file 
@@ -26,6 +37,6 @@ ___
     * ``npm run dev``
 
 ____
->this repo is only for testing api 
+> this repo is only for testing api 
 ____
 
