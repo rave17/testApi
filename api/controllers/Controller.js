@@ -6,14 +6,15 @@ module.exports = {
         console.log(allStudents);//test
         res.status(200).json(allStudents);
     },
+
     createStud: async function (req, res) {
         const stud = new Stud({
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            hobbies: req.body.hobbies
         });
-
         try {
             const studSaved = await stud.save();
             console.log(studSaved)//test
@@ -23,6 +24,7 @@ module.exports = {
             res.json().status(400).send(err);
         }
     },
+
     deleteStud: async function (req, res) {
         try {
             await Stud.findByIdAndDelete(req.params.id);
@@ -32,13 +34,15 @@ module.exports = {
             res.status(400).send(err);
         }
     },
+    
     updateStud: async function (req, res) {
         try {
             const studEdited = await Stud.findByIdAndUpdate(req.params.id,
                 {
                     $set: {
                         name: req.body.name,
-                        lastname: req.body.lastname
+                        lastname: req.body.lastname,
+                        hobbies: req.body.hobbies
                     }
                 });
             res.status(200).send('object edited ' + studEdited);
