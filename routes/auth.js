@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {getAll, createStud, deleteStud, updateStud} = require('../api/controllers/Controller');
+const { getAll, createStud, deleteStud, updateStud } = require('../api/controllers/Controller');
 
 router.get('/all', getAll);
 
