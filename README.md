@@ -21,10 +21,10 @@ ___
 ____
 ## TO DO
 
-[] create views
-[] check data recived
-[] integrate data with views
-[] verify integration
+[ ] create views
+[ ] check data recived
+[ ] integrate data with views
+[ ] verify integration
 ____
 
 
