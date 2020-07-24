@@ -1,13 +1,13 @@
 const Stud = require('../models/userStud');
 
 module.exports = {
-    getAll: async function (req, res) {
+    getAll: async function(req, res) {
         const allStudents = await Stud.find();
         console.log(allStudents);//test
         res.status(200).json(allStudents);
     },
 
-    createStud: async function (req, res) {
+    createStud: async function(req, res) {
         const stud = new Stud({
             name: req.body.name,
             lastname: req.body.lastname,
@@ -25,7 +25,7 @@ module.exports = {
         }
     },
 
-    deleteStud: async function (req, res) {
+    deleteStud: async function(req, res) {
         try {
             await Stud.findByIdAndDelete(req.params.id);
             res.status(200).send('object deleted')
@@ -34,8 +34,8 @@ module.exports = {
             res.status(400).send(err);
         }
     },
-    
-    updateStud: async function (req, res) {
+
+    updateStud: async function(req, res) {
         try {
             const studEdited = await Stud.findByIdAndUpdate(req.params.id,
                 {
